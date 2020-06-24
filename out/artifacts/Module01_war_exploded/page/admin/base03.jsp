@@ -23,5 +23,11 @@
                      width="18px"/>
             </a>
         </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="${baseUrl}/UserSignIn?action=signOut">退出登录 <span
+                        class="sr-only">(current)</span></a></li>
+            </ul>
+        </div>
     </div><!-- /.container-fluid -->
 </nav>

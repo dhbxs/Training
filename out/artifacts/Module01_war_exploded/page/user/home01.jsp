@@ -29,78 +29,77 @@
     List<Repository> rList = new ArrayList<Repository>();
     rList = (List<Repository>) session.getAttribute("r");
 %>
-<form method="post" action="${baseUrl}/Cart?action=addCart">
-    <table class="table table-hover"
-    ">
+<div align="center">
+    <form method="post" action="${baseUrl}/Cart?action=addCart" style="width: 80%">
+        <table class="table table-hover">
+        <thead>
+        <tr align="center" valign="center">
+            <th align="center" valign="center">操作</th>
+            <th align="center" valign="center">商品名称</th>
+            <th align="center" valign="center">月销</th>
+            <th align="center" valign="center">价格</th>
+            <th align="center" valign="center">描述</th>
+            <th align="center" valign="center">图片</th>
+        </tr>
+        </thead>
 
-    <thead>
-    <tr align="center" valign="center">
-        <th align="center" valign="center">操作</th>
-        <th align="center" valign="center">商品名称</th>
-        <th align="center" valign="center">月销</th>
-        <th align="center" valign="center">价格</th>
-        <th align="center" valign="center">描述</th>
-        <th align="center" valign="center">图片</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    <%
-        for (int i = 0; i < rList.size(); i++) {
-    %>
-    <tr>
-        <td valign="middle" style="vertical-align: middle!important;"><input type="checkbox" name="cart" value="<%if (rList.get(i) != null)
+        <tbody>
+        <%
+            for (int i = 0; i < rList.size(); i++) {
+        %>
+        <tr>
+            <td valign="middle" style="vertical-align: middle!important;"><input type="checkbox" name="cart" value="<%if (rList.get(i) != null)
 					out.print(rList.get(i).getReId());%>">
-        </td>
-        <td valign="middle" style="vertical-align: middle!important;">
-            <%
-                if (rList.get(i) != null)
-                    out.print(rList.get(i).getReName());
-            %>
-        </td>
-        <td valign="middle" style="vertical-align: middle!important;">
-            <%
-                if (rList.get(i) != null)
-                    out.print(rList.get(i).getReBuyNum());
-            %>
-        </td>
-        <td valign="middle" style="vertical-align: middle!important;">
-            <%
-                if (rList.get(i) != null)
-                    out.print(rList.get(i).getRePrice());
-            %>
-        </td>
-        <td valign="middle" style="vertical-align: middle!important;">
-            <%
-                if (rList.get(i) != null)
-                    out.print(rList.get(i).getReDescrip());
-            %>
-        </td>
-        <td valign="middle" style="vertical-align: middle!important;">
-            <%
-                if (rList.get(i) != null) {
-                    String url = rList.get(i).getImgUrl();
-            %>
-            <img height="100px" width="100px" src="<%=url%>"/>
-            <%
-                }
-            %>
+            </td>
+            <td valign="middle" style="vertical-align: middle!important;">
+                <%
+                    if (rList.get(i) != null)
+                        out.print(rList.get(i).getReName());
+                %>
+            </td>
+            <td valign="middle" style="vertical-align: middle!important;">
+                <%
+                    if (rList.get(i) != null)
+                        out.print(rList.get(i).getReBuyNum());
+                %>
+            </td>
+            <td valign="middle" style="vertical-align: middle!important;">
+                <%
+                    if (rList.get(i) != null)
+                        out.print(rList.get(i).getRePrice());
+                %>
+            </td>
+            <td valign="middle" style="vertical-align: middle!important;">
+                <%
+                    if (rList.get(i) != null)
+                        out.print(rList.get(i).getReDescrip());
+                %>
+            </td>
+            <td valign="middle" style="vertical-align: middle!important;">
+                <%
+                    if (rList.get(i) != null) {
+                        String url = rList.get(i).getImgUrl();
+                %>
+                <img height="100px" width="100px" src="<%=url%>"/>
+                <%
+                    }
+                %>
 
-        </td>
+            </td>
 
-    </tr>
-    <%
-        }
-    %>
-    </tbody>
-    </table>
-    <p align="right">
-        <button class="btn btn-lg btn-primary btn-block" type="submit"
-                style="width: fit-content; height: fit-content">加入购物车
-        </button>
-    </p>
-    </div>
-</form>
+        </tr>
+        <%
+            }
+        %>
+        </tbody>
+        </table>
+        <p align="right">
+            <button class="btn btn-lg btn-primary btn-block" type="submit"
+                    style="width: fit-content; height: fit-content">加入购物车
+            </button>
+        </p>
+    </form>
+</div>
 <br>
 </body>
 </html>
