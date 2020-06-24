@@ -42,8 +42,7 @@ public class AddIntoRepository extends HttpServlet {
         addIntoRepositoryService.addRepository(repository);
 
         //放入session中以便home页读取
-        List<Repository> repositories = new ArrayList<>();
-        repositories = getRespositoryService.getRespoository();
+        List<Repository> repositories = getRespositoryService.getRespoository();
         request.getSession().setAttribute("r", repositories);
 
         response.sendRedirect("page/admin/home.jsp");

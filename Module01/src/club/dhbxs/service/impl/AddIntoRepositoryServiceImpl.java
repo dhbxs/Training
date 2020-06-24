@@ -13,9 +13,14 @@ import club.dhbxs.service.AddIntoRepositoryService;
  * @Version 1.0
  **/
 public class AddIntoRepositoryServiceImpl implements AddIntoRepositoryService {
+    private RepositoryDao repositoryDao = new RepositoryDaoImpl();
     @Override
     public void addRepository(Repository repository) {
-        RepositoryDao repositoryDao = new RepositoryDaoImpl();
         repositoryDao.addRepository(repository);
+    }
+
+    @Override
+    public void revise(Repository repository) {
+        repositoryDao.updateRepository(repository);
     }
 }

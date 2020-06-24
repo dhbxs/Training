@@ -9,4 +9,5 @@ public interface AddIntoRepositoryService {
      * @param repository
      */
     public void addRepository(Repository repository);
+    public void revise(Repository repository);
 }

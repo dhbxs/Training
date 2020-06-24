@@ -20,41 +20,43 @@
     </h1>
 </div>
 <br>
-<form name="adminAdd" action="../../AddIntoRepository?action=addInto" method="post">
-    <div class="input-group">
-        <span class="input-group-addon" id="basic-addon1">商品名称</span>
-        <input type="text" class="form-control" placeholder="Product Name" aria-describedby="basic-addon1"
-               name="reName"/>
-    </div>
+<div align="center">
+    <form name="adminAdd" action="../../AddIntoRepository?action=addInto" method="post" style="width: 70%">
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">商品名称</span>
+            <input type="text" class="form-control" placeholder="Product Name" aria-describedby="basic-addon1"
+                   name="reName"/>
+        </div>
 
-    <div class="input-group">
-        <span class="input-group-addon">单价：人民币</span>
-        <input type="text" class="form-control" name="rePrice"/>
-        <span class="input-group-addon">元</span>
-    </div>
+        <div class="input-group">
+            <span class="input-group-addon">单价：人民币</span>
+            <input type="text" class="form-control" name="rePrice"/>
+            <span class="input-group-addon">元</span>
+        </div>
 
-    <div class="input-group">
-        <span class="input-group-addon">数量</span>
-        <input type="number" class="form-control" name="reNum"/>
-        <span class="input-group-addon">件</span>
-    </div>
+        <div class="input-group">
+            <span class="input-group-addon">数量</span>
+            <input type="number" class="form-control" name="reNum"/>
+            <span class="input-group-addon">件</span>
+        </div>
 
-    <div class="input-group">
-        <span class="input-group-addon">描述</span>
-        <input type="text" class="form-control" name="describe"/>
-    </div>
+        <div class="input-group">
+            <span class="input-group-addon">描述</span>
+            <input type="text" class="form-control" name="describe"/>
+        </div>
 
-    <div align="center" class="input-group">
-        <span class="input-group-addon">图片地址</span>
-        <input type="text" class="form-control" name="imgUrl"/>
-        <span class="input-group-addon">url</span>
-    </div>
-    <br>
-    <p align="right">
-        <button class="btn btn-lg btn-primary btn-block" type="submit"
-                style="width: fit-content; height: fit-content">立即添加
-        </button>
-    </p>
-</form>
+        <div align="center" class="input-group">
+            <span class="input-group-addon">图片地址</span>
+            <input type="text" class="form-control" name="imgUrl"/>
+            <span class="input-group-addon">url</span>
+        </div>
+        <br>
+        <p align="right">
+            <button class="btn btn-lg btn-primary btn-block" type="submit"
+                    style="width: fit-content; height: fit-content">立即添加
+            </button>
+        </p>
+    </form>
+</div>
 </body>
 </html>
