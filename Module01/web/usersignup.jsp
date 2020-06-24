@@ -41,7 +41,7 @@
 </head>
 <body>
 <div class="container" style="width: 300px; height: 500px" align="center">
-    <form class="form-signin" method="post" action="UserSignIn">
+    <form class="form-signin" method="post" action="UserSignUp">
         <%--@declare id="inputemail"--%><h2 class="form-signin-heading">请注册</h2>
         <label for="inputUserName" class="sr-only">用户名</label>
         <input type="text" id="inputUserName" name="inputUserName" class="form-control" placeholder="用户名" required

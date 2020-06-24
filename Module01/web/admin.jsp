@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container" style="width: 300px; height: 500px" align="center">
-    <form class="form-signin" method="post" action="UserSignUp?action=verifyAdmin">
+    <form class="form-signin" method="post" action="UserSignIn?action=verifyAdmin">
         <h2 class="form-signin-heading">登录后台</h2>
         <label for="inputUserName" class="sr-only">管理员</label>
         <input type="text" id="inputUserName" name="inputUserName" class="form-control" placeholder="用户名" required

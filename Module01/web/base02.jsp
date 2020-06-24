@@ -46,7 +46,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="${baseUrl}/page/user/cartList.jsp">购物车 <span
                         class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="${baseUrl}/UserSignUp?action=signOut">退出登录 <span
+                <li class="active"><a href="${baseUrl}/UserSignIn?action=signOut">退出登录 <span
                         class="sr-only">(current)</span></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

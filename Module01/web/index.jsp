@@ -44,7 +44,7 @@
 
 <body>
 <div class="container" style="width: 300px; height: 500px" align="center">
-    <form class="form-signin" method="post" action="UserSignUp?action=verify">
+    <form class="form-signin" method="post" action="UserSignIn?action=verify">
         <h2 class="form-signin-heading">请登录</h2>
         <label for="inputUserName" class="sr-only">用户名</label>
         <input type="text" id="inputUserName" name="inputUserName" class="form-control" placeholder="用户名" required
@@ -58,7 +58,7 @@
         <br>
         <div align="right">
             <a href="admin.jsp">后台</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="usersignin.jsp">注册</a>
+            <a href="usersignup.jsp">注册</a>
         </div>
 
     </form>
