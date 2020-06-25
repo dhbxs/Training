@@ -3,7 +3,6 @@ package club.dhbxs.dao.impl;
 import club.dhbxs.bean.Repository;
 import club.dhbxs.dao.RepositoryDao;
 import club.dhbxs.utils.JdbcUtils;
-import com.mysql.cj.x.protobuf.MysqlxCrud;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

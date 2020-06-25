@@ -18,18 +18,15 @@ import java.util.List;
 public class GetRespositoryServiceImpl implements GetRespositoryService {
     @Override
     public List<Repository> getRespoository() {
-
-        List<Repository> r = new ArrayList<>();
         RepositoryDao repository = new RepositoryDaoImpl();
-        r = repository.queryRepositories();
+        List<Repository> r = repository.queryRepositories();
         return r;
     }
 
     @Override
     public Repository getRepositoryById(int id) {
-        Repository r1 = new Repository();
         RepositoryDao repository = new RepositoryDaoImpl();
-        r1 = repository.queryRepositoryById(id);
+        Repository r1 = repository.queryRepositoryById(id);
         return r1;
     }
 }

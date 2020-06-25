@@ -27,24 +27,24 @@
             <input type="text" class="form-control" placeholder="Product Name" aria-describedby="basic-addon1"
                    name="reName"/>
         </div>
-
+        <br>
         <div class="input-group">
             <span class="input-group-addon">单价：人民币</span>
             <input type="text" class="form-control" name="rePrice"/>
             <span class="input-group-addon">元</span>
         </div>
-
+        <br>
         <div class="input-group">
             <span class="input-group-addon">数量</span>
             <input type="number" class="form-control" name="reNum"/>
             <span class="input-group-addon">件</span>
         </div>
-
+        <br>
         <div class="input-group">
             <span class="input-group-addon">描述</span>
             <input type="text" class="form-control" name="describe"/>
         </div>
-
+        <br>
         <div align="center" class="input-group">
             <span class="input-group-addon">图片地址</span>
             <input type="text" class="form-control" name="imgUrl"/>

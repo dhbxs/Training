@@ -22,8 +22,7 @@ public class GetRepository extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         GetRespositoryService getRespositoryService = new GetRespositoryServiceImpl();
-        List<Repository> r = new ArrayList<>();
-        r = getRespositoryService.getRespoository();
+        List<Repository> r = getRespositoryService.getRespoository();
         request.getSession().setAttribute("r", r);
         User user = (User) request.getSession().getAttribute("user");
         if (user.getUserLevel() == null) {

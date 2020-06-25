@@ -44,7 +44,6 @@ public class Cart extends HttpServlet {
     protected void buyCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] address = request.getParameterValues("address");
         User user = (User) request.getSession().getAttribute("user");
-//        System.out.println(address[0]);
         List<Repository> repositoryList = (List<Repository>) request.getSession().getAttribute("cartList");
         if (address[0] != null) {
             ordeService.buy(repositoryList, address, user);
@@ -65,7 +64,6 @@ public class Cart extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-//        System.out.println(action);
         try {
             //获取业务鉴别字符串，获取相应业务的方法，方法反射对象
             Method method = this.getClass().getDeclaredMethod(action, HttpServletRequest.class, HttpServletResponse.class);

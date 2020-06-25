@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "AddIntoRepository", urlPatterns = {"/AddIntoRepository"})
@@ -51,7 +50,6 @@ public class AddIntoRepository extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-//        System.out.println(action);
         try {
             //获取业务鉴别字符串，获取相应业务的方法，方法反射对象
             Method method = this.getClass().getDeclaredMethod(action, HttpServletRequest.class, HttpServletResponse.class);

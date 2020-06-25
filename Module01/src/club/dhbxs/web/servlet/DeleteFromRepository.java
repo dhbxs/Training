@@ -25,7 +25,6 @@ public class DeleteFromRepository extends HttpServlet {
         //从数据库中删除商品信息
         String id = request.getParameter("productId");
         Boolean flag = deleteFromRepositoryService.delete(id);
-        //System.out.println(flag);
         if (flag == false) {
             response.sendRedirect("page/admin/home.jsp?flag=0");
             return;

@@ -16,7 +16,6 @@ public class DeleteFromRepositoryServiceImpl implements DeleteFromRepositoryServ
     @Override
     public Boolean delete(String id) {
         Integer iD = Integer.valueOf(id);
-//        System.out.println(iD);
         RepositoryDao repositoryDao = new RepositoryDaoImpl();
         int i = repositoryDao.deleteRepository(iD);
         if (i > 0) {

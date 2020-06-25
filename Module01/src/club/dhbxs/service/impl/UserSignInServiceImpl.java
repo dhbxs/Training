@@ -17,9 +17,8 @@ import club.dhbxs.service.UserSignUpService;
 public class UserSignInServiceImpl implements UserSignInService {
     @Override
     public User verify(User u){
-        User u1 = new User();
         UserDao user = new UserDaoImpl();
-        u1 = user.queryUserByName(u.getUserName());
+        User u1 = user.queryUserByName(u.getUserName());
         if (u1 != null){
             if(u.getUserName().equals(u1.getUserName())){
                 if (u.getUserPassword().equals(u1.getUserPassword())) {
@@ -32,14 +31,11 @@ public class UserSignInServiceImpl implements UserSignInService {
 
     @Override
     public User verifyAdmin(User u) {
-//        System.out.println(verify(u));
         if (verify(u) != null) {
-            User u1 = new User();
             UserDao user = new UserDaoImpl();
-            u1 = user.queryUserByName(u.getUserName());
+            User u1 = user.queryUserByName(u.getUserName());
             if (u1.getUserLevel() != null){
                 if (u1.getUserLevel().equals("admin")) {
-//                    System.out.println(u1);
                     return u1;
                 }
             }

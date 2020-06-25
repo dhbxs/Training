@@ -20,8 +20,7 @@ public class CartServiceImpl implements CartService {
         GetRespositoryService getRespositoryService = new GetRespositoryServiceImpl();
         List<Repository> repositories = new ArrayList<>();
         for (int i = 0; i < ids.length; i++) {
-            Repository repository = new Repository();
-            repository = getRespositoryService.getRepositoryById(Integer.parseInt(ids[i]));
+            Repository repository = getRespositoryService.getRepositoryById(Integer.parseInt(ids[i]));
             repositories.add(repository);
         }
         return repositories;
@@ -30,8 +29,7 @@ public class CartServiceImpl implements CartService {
     @Override
     public List<Repository> deleteFromList(List<Repository> repositories, String s) {
         for (int i = repositories.size() - 1; i >= 0; i--) {
-            Repository repository = new Repository();
-            repository = repositories.get(i);
+            Repository repository = repositories.get(i);
             if (repository.getReId().equals(Integer.valueOf(s))) {
                 repositories.remove(repository);
             }

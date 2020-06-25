@@ -36,8 +36,7 @@ public class UserSignIn extends HttpServlet {
             User user = new User();
             user.setUserName(userName);
             user.setUserPassword(userPassword);
-            User user1 = new User();
-            user1 = userSignInService.verify(user);
+            User user1 = userSignInService.verify(user);
             if (user1 != null) {
                 request.getSession().setAttribute("user", user);
                 response.sendRedirect("GetRepository");
@@ -67,8 +66,7 @@ public class UserSignIn extends HttpServlet {
             User user = new User();
             user.setUserName(userName);
             user.setUserPassword(userPassword);
-            User user1 = new User();
-            user1 = userSignInService.verifyAdmin(user);
+            User user1 = userSignInService.verifyAdmin(user);
             if (user1 != null) {
                 request.getSession().setAttribute("user", user1);
                 response.sendRedirect("GetRepository");

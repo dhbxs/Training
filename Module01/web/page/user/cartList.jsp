@@ -39,63 +39,61 @@
         </small>
     </h1>
 </div>
-<form action="${baseUrl}/Cart?action=buyCart" method="post">
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <td>名称</td>
-            <td>销量</td>
-            <td>库存</td>
-            <td>价格</td>
-            <td>操作</td>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${cartList}" var="repositories">
+<div align="center">
+    <form action="${baseUrl}/Cart?action=buyCart" method="post" style="width: 80%">
+        <table class="table table-hover">
+            <thead>
             <tr>
-                <td style="vertical-align: middle!important;">${repositories.reName}</td>
-                <td style="vertical-align: middle!important;">${repositories.reBuyNum}</td>
-                <td style="vertical-align: middle!important;">${repositories.reNum}</td>
-                <td style="vertical-align: middle!important;">${repositories.rePrice}</td>
-                <td style="vertical-align: middle!important;"><a class="btn btn-default"
-                                                                 href="../../DeleteFromCart?productId=${repositories.reId}"
-                                                                 role="button">删除</a></td>
+                <td>名称</td>
+                <td>销量</td>
+                <td>库存</td>
+                <td>价格</td>
+                <td>操作</td>
             </tr>
-        </c:forEach>
-        <tr>
-            <td colspan="2" style="vertical-align: middle!important;">
-                <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon2">收货地址</span>
-                    <input type="text" name="address" class="form-control" placeholder="Address" style="width: 300%"/>
-                </div>
-            </td>
-            <td style="vertical-align: middle!important;">
-                <span class="label label-danger">未付款</span>
-            </td>
-            <td valign="center" style="vertical-align: middle!important;">
-                <span class="label label-warning">总价:<%=total%></span>
-            </td>
-            <td>
-                &nbsp;&nbsp;&nbsp;
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4" style="vertical-align: middle!important;">
-                &nbsp;&nbsp;&nbsp;
-            </td>
-            <td style="vertical-align: middle!important;">
-                <button class="btn btn-lg btn-primary btn-block" type="submit"
-                        style="width: fit-content; height: fit-content">立即下单
-                </button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
-    <%--    <p align="right">--%>
-    <%--        --%>
-    <%--    </p>--%>
-
-</form>
+            </thead>
+            <tbody>
+            <c:forEach items="${cartList}" var="repositories">
+                <tr>
+                    <td style="vertical-align: middle!important;">${repositories.reName}</td>
+                    <td style="vertical-align: middle!important;">${repositories.reBuyNum}</td>
+                    <td style="vertical-align: middle!important;">${repositories.reNum}</td>
+                    <td style="vertical-align: middle!important;">${repositories.rePrice}</td>
+                    <td style="vertical-align: middle!important;"><a class="btn btn-default"
+                                                                     href="../../DeleteFromCart?productId=${repositories.reId}"
+                                                                     role="button">删除</a></td>
+                </tr>
+            </c:forEach>
+            <tr>
+                <td colspan="2" style="vertical-align: middle!important;">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="sizing-addon2">收货地址</span>
+                        <input type="text" name="address" class="form-control" placeholder="Address"
+                               style="width: 200%"/>
+                    </div>
+                </td>
+                <td style="vertical-align: middle!important;">
+                    <span class="label label-danger">未付款</span>
+                </td>
+                <td valign="center" style="vertical-align: middle!important;">
+                    <span class="label label-warning">总价:<%=total%></span>
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="vertical-align: middle!important;">
+                    &nbsp;&nbsp;&nbsp;
+                </td>
+                <td style="vertical-align: middle!important;">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit"
+                            style="width: fit-content; height: fit-content">立即下单
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
 </body>
 </html>

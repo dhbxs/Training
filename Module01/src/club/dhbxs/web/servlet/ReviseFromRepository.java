@@ -26,7 +26,6 @@ private AddIntoRepositoryService addIntoRepositoryService = new AddIntoRepositor
     protected void read(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //从数据库中读取指定id的商品信息
         Integer id = Integer.parseInt(request.getParameter("productId"));
-        //System.out.println(id);
         Repository repository = getRespositoryService.getRepositoryById(id);
         request.getSession().setAttribute("revise", repository);
         response.sendRedirect("page/admin/reviseProduct.jsp");
