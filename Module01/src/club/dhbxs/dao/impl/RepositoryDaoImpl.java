@@ -97,7 +97,6 @@ public class RepositoryDaoImpl extends BaseDao implements RepositoryDao {
                 repository.setImgUrl(rs.getString("img_url"));
                 repositorys.add(repository);
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
