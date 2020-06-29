@@ -21,7 +21,6 @@ public class DeleteFromCart extends HttpServlet {
         String s = request.getParameter("productId");
         List<Repository> repositories = (List<Repository>) request.getSession().getAttribute("cartList");
         repositories = cartService.deleteFromList(repositories, s);
-//        System.out.println(repositories.size());
         request.getSession().setAttribute("cartList", repositories);
         if (!repositories.isEmpty()) {
             response.sendRedirect("page/user/cartList.jsp");

@@ -5,7 +5,10 @@ import club.dhbxs.bean.User;
 
 import java.util.List;
 
+/**
+ * @author 17235
+ */
 public interface OrdeService {
-    public void buy(List<Repository> repositories, String[] address, User user);
+    void buy(List<Repository> repositories, String[] address, User user);
 
 }

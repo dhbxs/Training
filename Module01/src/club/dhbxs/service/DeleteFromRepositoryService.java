@@ -1,5 +1,8 @@
 package club.dhbxs.service;
 
+/**
+ * @author 17235
+ */
 public interface DeleteFromRepositoryService {
-    public Boolean delete(String id);
+    Boolean delete(String id);
 }

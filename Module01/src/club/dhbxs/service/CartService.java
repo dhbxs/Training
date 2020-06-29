@@ -4,14 +4,16 @@ import club.dhbxs.bean.Repository;
 
 import java.util.List;
 
+/**
+ * @author 17235
+ */
 public interface CartService {
 
     /**
-     *
      * @param ids
      * @return
      */
-    public List<Repository> getCart(String[] ids);
+    List<Repository> getCart(String[] ids);
 
-    public List<Repository> deleteFromList(List<Repository> repositories, String s);
+    List<Repository> deleteFromList(List<Repository> repositories, String s);
 }

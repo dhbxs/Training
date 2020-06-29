@@ -1,20 +1,15 @@
 package club.dhbxs.web.servlet;
 
 import club.dhbxs.bean.User;
-import club.dhbxs.service.UserSignInService;
 import club.dhbxs.service.UserSignUpService;
-import club.dhbxs.service.impl.UserSignInServiceImpl;
 import club.dhbxs.service.impl.UserSignUpServiceImpl;
 
-import javax.lang.model.element.VariableElement;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.lang.reflect.Method;
 
 /**
  * @author 17235

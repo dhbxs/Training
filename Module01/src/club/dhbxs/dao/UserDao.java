@@ -2,6 +2,9 @@ package club.dhbxs.dao;
 
 import club.dhbxs.bean.User;
 
+/**
+ * @author 17235
+ */
 public interface UserDao {
     /**
      * 向数据库中得user表添加用户
@@ -9,7 +12,7 @@ public interface UserDao {
      * @param user
      * @return
      */
-    public int addUser(User user);
+    int addUser(User user);
 
     /**
      * 更具用户姓名查询用户，返回用户封装对象
@@ -17,5 +20,5 @@ public interface UserDao {
      * @param name
      * @return
      */
-    public User queryUserByName(String name);
+    User queryUserByName(String name);
 }

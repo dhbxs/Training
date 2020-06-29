@@ -4,7 +4,11 @@ import club.dhbxs.bean.Repository;
 
 import java.util.List;
 
+/**
+ * @author 17235
+ */
 public interface GetRespositoryService {
-    public List<Repository> getRespoository();
-    public Repository getRepositoryById(int id);
+    List<Repository> getRespoository();
+
+    Repository getRepositoryById(int id);
 }

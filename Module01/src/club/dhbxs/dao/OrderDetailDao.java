@@ -1,8 +1,10 @@
 package club.dhbxs.dao;
 
-import club.dhbxs.bean.OrderBuy;
 import club.dhbxs.bean.OrderDetail;
 
+/**
+ * @author 17235
+ */
 public interface OrderDetailDao {
 
     /**
@@ -11,5 +13,5 @@ public interface OrderDetailDao {
      * @param orderDetail
      * @return
      */
-    public int addOrderDetail(OrderDetail orderDetail);
+    int addOrderDetail(OrderDetail orderDetail);
 }

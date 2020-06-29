@@ -58,9 +58,12 @@
                     <td style="vertical-align: middle!important;">${repositories.reBuyNum}</td>
                     <td style="vertical-align: middle!important;">${repositories.reNum}</td>
                     <td style="vertical-align: middle!important;">${repositories.rePrice}</td>
-                    <td style="vertical-align: middle!important;"><a class="btn btn-default"
-                                                                     href="../../DeleteFromCart?productId=${repositories.reId}"
-                                                                     role="button">删除</a></td>
+                    <td style="vertical-align: middle!important;">
+                        <a class="btn btn-default"
+                           href="../../DeleteFromCart?productId=${repositories.reId}"
+                           role="button">删除
+                        </a>
+                    </td>
                 </tr>
             </c:forEach>
             <tr>

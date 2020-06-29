@@ -2,9 +2,12 @@ package club.dhbxs.service;
 
 import club.dhbxs.bean.User;
 
+/**
+ * @author 17235
+ */
 public interface UserSignInService {
 
-    public User verify(User u);
+    User verify(User u);
 
-    public User verifyAdmin(User u);
+    User verifyAdmin(User u);
 }

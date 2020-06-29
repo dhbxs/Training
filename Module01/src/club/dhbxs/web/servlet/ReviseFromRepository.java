@@ -22,7 +22,8 @@ import java.util.List;
 @WebServlet(name = "ReviseFromRepository", urlPatterns = {"/ReviseFromRepository"})
 public class ReviseFromRepository extends HttpServlet {
     private GetRespositoryService getRespositoryService = new GetRespositoryServiceImpl();
-private AddIntoRepositoryService addIntoRepositoryService = new AddIntoRepositoryServiceImpl();
+    private AddIntoRepositoryService addIntoRepositoryService = new AddIntoRepositoryServiceImpl();
+
     protected void read(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //从数据库中读取指定id的商品信息
         Integer id = Integer.parseInt(request.getParameter("productId"));

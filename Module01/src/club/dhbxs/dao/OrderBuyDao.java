@@ -2,6 +2,9 @@ package club.dhbxs.dao;
 
 import club.dhbxs.bean.OrderBuy;
 
+/**
+ * @author 17235
+ */
 public interface OrderBuyDao {
 
     /**
@@ -10,7 +13,7 @@ public interface OrderBuyDao {
      * @param buy
      * @return
      */
-    public int addOrderBuy(OrderBuy buy);
+    int addOrderBuy(OrderBuy buy);
 
-    public OrderBuy queryOrderBuyByOrderTime(String orderNumber);
+    OrderBuy queryOrderBuyByOrderTime(String orderNumber);
 }

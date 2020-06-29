@@ -6,8 +6,6 @@ import club.dhbxs.service.CartService;
 import club.dhbxs.service.OrdeService;
 import club.dhbxs.service.impl.CartServiceImpl;
 import club.dhbxs.service.impl.OrdeServiceImpl;
-import com.mysql.cj.Session;
-import sun.plugin.dom.core.Element;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -32,11 +30,6 @@ public class Cart extends HttpServlet {
         }
         List<Repository> repositories = new ArrayList<>();
         repositories = cartService.getCart(cart);
-        /*
-        for (Repository repository : repositories) {
-            System.out.println(repository);
-        }
-        */
         if (cart != null) {
             request.getSession().setAttribute("cartList", repositories);
             response.sendRedirect("page/user/cartList.jsp");
