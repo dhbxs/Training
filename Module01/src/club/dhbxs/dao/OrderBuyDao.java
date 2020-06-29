@@ -11,4 +11,6 @@ public interface OrderBuyDao {
      * @return
      */
     public int addOrderBuy(OrderBuy buy);
+
+    public OrderBuy queryOrderBuyByOrderTime(String orderNumber);
 }

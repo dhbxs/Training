@@ -25,10 +25,10 @@ public class GetRepository extends HttpServlet {
         List<Repository> r = getRespositoryService.getRespoository();
         request.getSession().setAttribute("r", r);
         User user = (User) request.getSession().getAttribute("user");
-        if (user.getUserLevel() == null) {
-            response.sendRedirect("page/user/home01.jsp");
-        } else if (user.getUserLevel().equals("admin")) {
+        if (user.getUserLevel().equals("admin")) {
             response.sendRedirect("page/admin/home.jsp");
+        }else {
+            response.sendRedirect("page/user/home01.jsp");
         }
     }
 

@@ -38,7 +38,7 @@ public class UserSignIn extends HttpServlet {
             user.setUserPassword(userPassword);
             User user1 = userSignInService.verify(user);
             if (user1 != null) {
-                request.getSession().setAttribute("user", user);
+                request.getSession().setAttribute("user", user1);
                 response.sendRedirect("GetRepository");
                 return;
             } else {

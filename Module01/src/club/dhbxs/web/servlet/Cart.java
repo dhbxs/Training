@@ -6,12 +6,15 @@ import club.dhbxs.service.CartService;
 import club.dhbxs.service.OrdeService;
 import club.dhbxs.service.impl.CartServiceImpl;
 import club.dhbxs.service.impl.OrdeServiceImpl;
+import com.mysql.cj.Session;
+import sun.plugin.dom.core.Element;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -42,8 +45,9 @@ public class Cart extends HttpServlet {
     }
 
     protected void buyCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
         String[] address = request.getParameterValues("address");
-        User user = (User) request.getSession().getAttribute("user");
+        User user = (User) session.getAttribute("user");
         List<Repository> repositoryList = (List<Repository>) request.getSession().getAttribute("cartList");
         if (address[0] != null) {
             ordeService.buy(repositoryList, address, user);

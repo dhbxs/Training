@@ -46,10 +46,12 @@ public class OrdeServiceImpl implements OrdeService {
         OrderBuyDao orderBuyDao = new OrderBuyDaoImpl();
         orderBuyDao.addOrderBuy(orderBuy);
 
+        orderBuy = orderBuyDao.queryOrderBuyByOrderTime(orderNumber);
         /**
          * 生成并添加orderDetail信息到数据库
          */
         OrderDetail orderDetail = new OrderDetail();
+        orderDetail.setOrderId(orderBuy.getOrderId());
         orderDetail.setOrderId(orderBuy.getOrderId());
         orderDetail.setDetailNum(1);
         BigDecimal bigDecimal = BigDecimal.valueOf(0);
